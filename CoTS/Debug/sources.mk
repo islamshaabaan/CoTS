@@ -21,6 +21,7 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 HAL/CLCD \
+HAL/KPAD \
 HAL/LED \
 HAL/SSD \
 MCAL/DIO \

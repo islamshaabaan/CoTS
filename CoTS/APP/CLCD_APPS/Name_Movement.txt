@@ -1,0 +1,101 @@
+/*
+ * main.c
+ *
+ *  Created on: Aug 3, 2023
+ *      Author: Islam Shaaban
+ */
+
+#include "LIB/STD_TYPES.h"
+#include "LIB/BIT_MACROS.h"
+#include "MCAL/DIO/DIO_interface.h"
+#include "HAL/LED/LED_interface.h"
+#include "HAL/SSD/SSD_interface.h"
+#include "HAL/CLCD/CLCD_interface.h"
+#define F_CPU		8000000UL
+#include <util/delay.h>
+
+
+
+
+//Display name With Sine wave motion
+
+
+u8 iChar[] = {
+		0x02,
+		0x02,
+		0x02,
+		0x02,
+		0x02,
+		0x03,
+		0x02,
+		0x07
+};
+u8 sChar[]={
+		0x00,
+		0x00,
+		0x00,
+		0x15,
+		0x15,
+		0x1F,
+		0x00,
+		0x00
+};
+u8 laChar[]={
+		0x02,
+		0x02,
+		0x12,
+		0x0A,
+		0x06,
+		0x07,
+		0x18,
+		0x00
+};
+u8 mChar[]={
+		0x07,
+		0x05,
+		0x1F,
+		0x10,
+		0x10,
+		0x10,
+		0x10,
+		0x00
+};
+int main(void){
+
+
+	CLCD_voidInit();
+
+	u8 arr[]={"Islam"};
+	u8 Row=1;
+
+	while(1)
+	{
+
+		for(u8 col=2;col<16;col+=3)
+		{
+			CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+			Row=(col % 2 == 0)?2:1;
+			CLCD_voidSetPosition( Row , col );
+			CLCD_voidSendString(arr);
+
+
+			Row=(col % 2 == 0)?1:2;
+			CLCD_voidSendExtraChar(0,mChar,Row,col);
+			CLCD_voidSendExtraChar(1,laChar,Row,col+1);
+			CLCD_voidSendExtraChar(2,sChar,Row,col+2);
+			CLCD_voidSendExtraChar(3,iChar,Row,col+3);
+
+			_delay_ms(300);
+			CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+
+		}
+	}
+
+
+	return 0 ;
+
+
+}
+
+
+

@@ -1,0 +1,191 @@
+/*
+ * Hamoksha_Story.c
+ *
+ *  Created on: Aug 6, 2023
+ *      Author: Islam Shaaban
+ */
+
+
+
+#include "LIB/STD_TYPES.h"
+#include "LIB/BIT_MACROS.h"
+#include "MCAL/DIO/DIO_interface.h"
+#include "HAL/LED/LED_interface.h"
+#include "HAL/SSD/SSD_interface.h"
+#include "HAL/CLCD/CLCD_interface.h"
+#define F_CPU		8000000UL
+#include <util/delay.h>
+
+
+
+u8 Person[]= {
+		0x0E,
+		0x0A,
+		0x0E,
+		0x04,
+		0x1F,
+		0x15,
+		0x0E,
+		0x11
+};
+u8 GradPerson[]= {
+		0x1F,
+		0x0E,
+		0x04,
+		0x1F,
+		0x04,
+		0x0E,
+		0x11,
+		0x11
+
+};
+u8 Building[]= {
+		0x1F,
+		0x1F,
+		0x1F,
+		0x1F,
+		0x1F,
+		0x1F,
+		0x1F,
+		0x1F
+};
+u8 Wire[]={
+		0x00,
+		0x00,
+		0x00,
+		0x00,
+		0x1F,
+		0x00,
+		0x00,
+		0x00
+};
+u8 Trap[]={
+		0x00,
+		0x0E,
+		0x11,
+		0x11,
+		0x11,
+		0x11,
+		0x0E,
+		0x00
+};
+
+int main(void){
+	CLCD_voidInit();
+	u8 i;
+	CLCD_voidStoreExtraChar(0,Person);
+	CLCD_voidStoreExtraChar(1,GradPerson);
+	CLCD_voidStoreExtraChar(2,Building);
+	CLCD_voidStoreExtraChar(3,Wire);
+	CLCD_voidStoreExtraChar(4,Trap);
+	CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+
+	while(1){
+		/*	Start of the Story */
+
+		CLCD_voidSetPosition( 1 , 1 );
+		CLCD_voidSendString((u8 *)"Hamo Graduation!");
+		_delay_ms(3000);
+		CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+		CLCD_voidSendString((u8 *)"ASU");
+		for(i=1; i<4; i++){
+			CLCD_voidSetPosition( 2 , i );
+			CLCD_voidSendData(2); // building
+		}
+		for(i=4; i<15; i++){
+			CLCD_voidSetPosition( 1 , 1 );
+			CLCD_voidSendString((u8 *)"ASU");
+			CLCD_voidSetPosition( 1 , 8 );
+			CLCD_voidSendString((u8 *)"GoWork :)");
+			for(u8 j=1; j<4; j++){
+				CLCD_voidSetPosition( 2 , j );
+				CLCD_voidSendData(2); // building
+			}
+			CLCD_voidSetPosition( 2 , i );
+			CLCD_voidSendData(1); // grad person
+			_delay_ms(200);
+			CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+		}
+		for(i=4; i<15; i++){
+			CLCD_voidSetPosition( 1 , 1 );
+			CLCD_voidSendString((u8 *)"goto ");
+			CLCD_voidSetPosition( 1 , 12 );
+			CLCD_voidSendString((u8 *)"Valeo");
+
+			for(u8 j=13; j<16; j++){
+				CLCD_voidSetPosition( 2 , j );
+				CLCD_voidSendData(2); // building
+			}
+			CLCD_voidSetPosition( 2 , i );
+			CLCD_voidSendData(0); // person
+			_delay_ms(200);
+			CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+		}
+		for(i=4; i<12; i++){
+			CLCD_voidSetPosition( 1 , 1 );
+			CLCD_voidSendString((u8 *)"Army");
+			CLCD_voidSetPosition( 1 , 12 );
+			CLCD_voidSendString((u8 *)"Valeo");
+
+			for(u8 j=13; j<16; j++){
+				CLCD_voidSetPosition( 2 , j );
+				CLCD_voidSendData(2); // building
+			}
+			CLCD_voidSetPosition( 2 , 14);
+			CLCD_voidSendData(0); // person(H)
+
+			for(u8 j=1; j<4; j++){
+				CLCD_voidSetPosition( 2 , j );
+				CLCD_voidSendData(2); // building
+			}
+			CLCD_voidSetPosition( 2 , 4 );
+			CLCD_voidSendData(0); // person
+			_delay_ms(200);
+			for(int w=5; w<14; w++){
+				CLCD_voidSetPosition( 2 , w );
+				CLCD_voidSendData(3); // wire
+			}
+			CLCD_voidSetPosition( 2 , 14 );
+			CLCD_voidSendData(4); // trap
+
+		}
+		for(i = 14; i> 4; i--){
+			//CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+			CLCD_voidSetPosition( 1 , 1 );
+			CLCD_voidSendString((u8 *)"Army ");
+			CLCD_voidSetPosition( 1 , 12 );
+			CLCD_voidSendString((u8 *)"Valeo");
+
+			for(u8 j=13; j<16; j++){
+				CLCD_voidSetPosition( 2 , j );
+				CLCD_voidSendData(2); // building
+			}
+			CLCD_voidSetPosition( 2 , i);
+			CLCD_voidSendData(0); // person(H)
+
+			for(u8 j=1; j<5; j++){
+				CLCD_voidSetPosition( 2 , j );
+				CLCD_voidSendData(2); // building
+			}
+			CLCD_voidSetPosition( 2 , 4 );
+			CLCD_voidSendData(0); // person
+			_delay_ms(200);
+			CLCD_voidSetPosition( 2 , i-1 );
+			CLCD_voidSendData(3); // wire
+			_delay_ms(200);
+
+			CLCD_voidSetPosition( 2 , i );
+			CLCD_voidSendData(4); // trap
+			CLCD_voidSendCommand(CLCD_CLR_DISPLAY);//display clear
+		}
+		CLCD_voidSetPosition( 1 , 1 );
+		CLCD_voidSendString((u8 *)"To be Continue..");
+		_delay_ms(5000);
+
+
+	}
+
+
+	return 1;
+
+}

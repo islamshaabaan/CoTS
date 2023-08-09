@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<PROJECT IID="1" BUILDPATH="C:/Users/marka/AppData/Local/Temp/4ba555b652124ddca9e6fb58db703a45/ATmega32" VERSION="814" TYPE="SOURCE" NAME="ATmega32" CONFIGURATION="Debug">
+ <FILES ATTACH="1">
+  <FILE ATTACH="1" GROUP="Source Files" NAME="ATmega32/main.asm"/>
+  <FILE ATTACH="1" GROUP="Firmware Files" NAME="ATmega32/Debug/Debug.obj" FIRMWARE="1"/>
+ </FILES>
+ <CONFIGURATION CRC="ed56bce3c56ff8f6184bcf1ddbcfd010" TARGET="Debug" COMPILER="AVRASM (Proteus)" NAME="Debug">
+  <CONTROLLER FAMILY="AVR" TYPE="ATmega32"/>
+  <FILE TOOL="ASM">
+   <FILE NAME="ATmega32/main.asm"/>
+  </FILE>
+  <OPTION DEFAULT="1" TOOL="ASM" NAME="-f" VALUE="O"/>
+  <OPTION DEFAULT="1" TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32def.inc&quot;"/>
+ </CONFIGURATION>
+ <CONFIGURATION CRC="ed56bce3c56ff8f6184bcf1ddbcfd010" TARGET="Release" COMPILER="AVRASM (Proteus)" NAME="Release">
+  <CONTROLLER FAMILY="AVR" TYPE="ATmega32"/>
+  <FILE TOOL="ASM">
+   <FILE NAME="ATmega32/main.asm"/>
+  </FILE>
+  <OPTION DEFAULT="1" TOOL="ASM" NAME="-f" VALUE="I"/>
+  <OPTION DEFAULT="1" TOOL="ASM" NAME="-i" VALUE="&quot;%COMPILER_DIR_ABS_DOS%\appnotes\m32def.inc&quot;"/>
+ </CONFIGURATION>
+</PROJECT>

@@ -35,7 +35,7 @@ void DIO_voidSetupPinDirection (u8 Copy_u8PortID, u8 Copy_u8PinID, u8 Copy_u8Dir
 
 void DIO_voidSetPinValue (u8 Copy_u8PortID, u8 Copy_u8PinID, u8 Copy_u8Value);
 
-u8 DIO_voidGetPinValue (u8 Copy_u8PortID, u8 Copy_u8PinID);
+u8 DIO_u8GetPinValue (u8 Copy_u8PortID, u8 Copy_u8PinID);
 
 void DIO_voidSetPortDirection    (u8 Copy_u8PortID , u8 Copy_u8Direction );
 

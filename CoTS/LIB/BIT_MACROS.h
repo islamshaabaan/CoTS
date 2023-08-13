@@ -1,5 +1,4 @@
-#define GET_BIT1(Reg, PinNumber)					Reg=(Reg &(1<<PinNumber))>>PinNumber
-#define GET_BIT(Reg, PinNumber)                Reg= ( ((Reg)>>(PinNumber)) & 0x01 )
+#define GET_BIT(Reg, PinNumber)               ( ((Reg)>>(PinNumber)) & 0x01 )
 #define SET_BIT(Reg, PinNumber)                 Reg|=(1<<PinNumber)
 #define CLR_BIT(Reg, PinNumber)					Reg&=~(1<<PinNumber)
 #define TOGGLE_BIT(Reg, PinNumber)				Reg^=(1<<PinNumber)

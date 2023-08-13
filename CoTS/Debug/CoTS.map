@@ -1,5 +1,7 @@
 Archive member included because of file (symbol)
 
+e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                              ./HAL/STEPPER_MOTOR/STEPPER_program.o (__udivmodhi4)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
                               ./HAL/CLCD/CLCD_program.o (__udivmodsi4)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
@@ -7,19 +9,19 @@ e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/w
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
                               ./HAL/SSD/SSD_program.o (__do_copy_data)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
-                              ./HAL/CLCD/CLCD_program.o (__fixunssfsi)
+                              ./HAL/STEPPER_MOTOR/STEPPER_program.o (__fixunssfsi)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
                               e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__subsf3)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
-                              ./HAL/CLCD/CLCD_program.o (__mulsf3)
+                              ./HAL/STEPPER_MOTOR/STEPPER_program.o (__mulsf3)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
                               ./HAL/CLCD/CLCD_program.o (__divsf3)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
-                              ./HAL/CLCD/CLCD_program.o (__gtsf2)
+                              ./HAL/STEPPER_MOTOR/STEPPER_program.o (__gtsf2)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
                               e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__gesf2)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
-                              ./HAL/CLCD/CLCD_program.o (__ltsf2)
+                              ./HAL/STEPPER_MOTOR/STEPPER_program.o (__ltsf2)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
                               e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o) (__fixsfsi)
 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
@@ -50,9 +52,11 @@ Linker script and memory map
 
 LOAD e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
 LOAD ./MCAL/DIO/DIO_program.o
+LOAD ./HAL/STEPPER_MOTOR/STEPPER_program.o
 LOAD ./HAL/SSD/SSD_program.o
 LOAD ./HAL/LED/LED_program.o
 LOAD ./HAL/KPAD/KPAD_program.o
+LOAD ./HAL/DC_MOTOR/DCMOTOR_program.o
 LOAD ./HAL/CLCD/CLCD_program.o
 LOAD ./main.o
 LOAD e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a
@@ -149,7 +153,7 @@ LOAD e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000     0x3346
+.text           0x00000000     0x5ad4
  *(.vectors)
  .vectors       0x00000000       0x54 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
                 0x00000000                __vectors
@@ -225,11 +229,14 @@ LOAD e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win
                 0x0000007e                __vector_18
                 0x0000007e                __vector_20
  .text          0x00000082        0x0 ./MCAL/DIO/DIO_program.o
+ .text          0x00000082        0x0 ./HAL/STEPPER_MOTOR/STEPPER_program.o
  .text          0x00000082        0x0 ./HAL/SSD/SSD_program.o
  .text          0x00000082        0x0 ./HAL/LED/LED_program.o
  .text          0x00000082        0x0 ./HAL/KPAD/KPAD_program.o
+ .text          0x00000082        0x0 ./HAL/DC_MOTOR/DCMOTOR_program.o
  .text          0x00000082        0x0 ./HAL/CLCD/CLCD_program.o
  .text          0x00000082        0x0 ./main.o
+ .text          0x00000082        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
  .text          0x00000082        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
  .text          0x00000082        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  .text          0x00000082        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
@@ -268,74 +275,106 @@ LOAD e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win
                 0x00000e9e      0x210 ./MCAL/DIO/DIO_program.o
                 0x00000e9e                DIO_voidSetPinValue
  .text.DIO_u8GetPinValue
-                0x000010ae      0x118 ./MCAL/DIO/DIO_program.o
+                0x000010ae       0xf6 ./MCAL/DIO/DIO_program.o
                 0x000010ae                DIO_u8GetPinValue
  .text.DIO_voidSetPortDirection
-                0x000011c6      0x10a ./MCAL/DIO/DIO_program.o
-                0x000011c6                DIO_voidSetPortDirection
+                0x000011a4      0x10a ./MCAL/DIO/DIO_program.o
+                0x000011a4                DIO_voidSetPortDirection
  .text.DIO_voidSetPortValue
-                0x000012d0       0x82 ./MCAL/DIO/DIO_program.o
-                0x000012d0                DIO_voidSetPortValue
+                0x000012ae       0x82 ./MCAL/DIO/DIO_program.o
+                0x000012ae                DIO_voidSetPortValue
  .text.DIO_u8GetPortValue
-                0x00001352       0x86 ./MCAL/DIO/DIO_program.o
-                0x00001352                DIO_u8GetPortValue
+                0x00001330       0x86 ./MCAL/DIO/DIO_program.o
+                0x00001330                DIO_u8GetPortValue
+ .text.STEPPER_voidInit
+                0x000013b6       0x5e ./HAL/STEPPER_MOTOR/STEPPER_program.o
+                0x000013b6                STEPPER_voidInit
+ .text.STEPPER_voidOn
+                0x00001414     0x255a ./HAL/STEPPER_MOTOR/STEPPER_program.o
+                0x00001414                STEPPER_voidOn
+ .text.STEPPER_voidOff
+                0x0000396e       0x36 ./HAL/STEPPER_MOTOR/STEPPER_program.o
+                0x0000396e                STEPPER_voidOff
+ .text.STEPPER_voidRotate
+                0x000039a4      0xa8c ./HAL/STEPPER_MOTOR/STEPPER_program.o
+                0x000039a4                STEPPER_voidRotate
  .text.SSD_voidInit
-                0x000013d8       0x66 ./HAL/SSD/SSD_program.o
-                0x000013d8                SSD_voidInit
+                0x00004430       0x66 ./HAL/SSD/SSD_program.o
+                0x00004430                SSD_voidInit
  .text.SSD_voidEnable
-                0x0000143e       0x84 ./HAL/SSD/SSD_program.o
-                0x0000143e                SSD_voidEnable
+                0x00004496       0x84 ./HAL/SSD/SSD_program.o
+                0x00004496                SSD_voidEnable
  .text.SSD_voidDisable
-                0x000014c2       0x5a ./HAL/SSD/SSD_program.o
-                0x000014c2                SSD_voidDisable
+                0x0000451a       0x5a ./HAL/SSD/SSD_program.o
+                0x0000451a                SSD_voidDisable
  .text.LED_voidInit
-                0x0000151c       0x7c ./HAL/LED/LED_program.o
-                0x0000151c                LED_voidInit
+                0x00004574       0x7c ./HAL/LED/LED_program.o
+                0x00004574                LED_voidInit
  .text.LED_voidON
-                0x00001598       0x68 ./HAL/LED/LED_program.o
-                0x00001598                LED_voidON
+                0x000045f0       0x68 ./HAL/LED/LED_program.o
+                0x000045f0                LED_voidON
  .text.LED_voidOFF
-                0x00001600       0x68 ./HAL/LED/LED_program.o
-                0x00001600                LED_voidOFF
+                0x00004658       0x68 ./HAL/LED/LED_program.o
+                0x00004658                LED_voidOFF
+ .text.KPAD_voidInit
+                0x000046c0       0xae ./HAL/KPAD/KPAD_program.o
+                0x000046c0                KPAD_voidInit
+ .text.KPAD_u8GetPressed
+                0x0000476e      0x1a8 ./HAL/KPAD/KPAD_program.o
+                0x0000476e                KPAD_u8GetPressed
+ .text.DCMOTOR_voidInit
+                0x00004916       0x22 ./HAL/DC_MOTOR/DCMOTOR_program.o
+                0x00004916                DCMOTOR_voidInit
+ .text.DCMOTOR_voidCWRotate
+                0x00004938       0x22 ./HAL/DC_MOTOR/DCMOTOR_program.o
+                0x00004938                DCMOTOR_voidCWRotate
+ .text.DCMOTOR_voidCCWRotate
+                0x0000495a       0x22 ./HAL/DC_MOTOR/DCMOTOR_program.o
+                0x0000495a                DCMOTOR_voidCCWRotate
+ .text.DCMOTOR_voidStop
+                0x0000497c       0x22 ./HAL/DC_MOTOR/DCMOTOR_program.o
+                0x0000497c                DCMOTOR_voidStop
  .text.CLCD_voidInit
-                0x00001668      0x5ac ./HAL/CLCD/CLCD_program.o
-                0x00001668                CLCD_voidInit
+                0x0000499e      0x5ac ./HAL/CLCD/CLCD_program.o
+                0x0000499e                CLCD_voidInit
  .text.CLCD_voidSendCommand
-                0x00001c14      0x350 ./HAL/CLCD/CLCD_program.o
-                0x00001c14                CLCD_voidSendCommand
+                0x00004f4a      0x350 ./HAL/CLCD/CLCD_program.o
+                0x00004f4a                CLCD_voidSendCommand
  .text.CLCD_voidSendData
-                0x00001f64      0x350 ./HAL/CLCD/CLCD_program.o
-                0x00001f64                CLCD_voidSendData
+                0x0000529a      0x350 ./HAL/CLCD/CLCD_program.o
+                0x0000529a                CLCD_voidSendData
  .text.CLCD_voidSetPosition
-                0x000022b4       0x50 ./HAL/CLCD/CLCD_program.o
-                0x000022b4                CLCD_voidSetPosition
+                0x000055ea       0x50 ./HAL/CLCD/CLCD_program.o
+                0x000055ea                CLCD_voidSetPosition
  .text.CLCD_voidSendExtraChar
-                0x00002304       0x82 ./HAL/CLCD/CLCD_program.o
-                0x00002304                CLCD_voidSendExtraChar
+                0x0000563a       0x82 ./HAL/CLCD/CLCD_program.o
+                0x0000563a                CLCD_voidSendExtraChar
  .text.CLCD_voidStoreExtraChar
-                0x00002386       0x68 ./HAL/CLCD/CLCD_program.o
-                0x00002386                CLCD_voidStoreExtraChar
+                0x000056bc       0x68 ./HAL/CLCD/CLCD_program.o
+                0x000056bc                CLCD_voidStoreExtraChar
  .text.CLCD_voidSendString
-                0x000023ee      0x146 ./HAL/CLCD/CLCD_program.o
-                0x000023ee                CLCD_voidSendString
+                0x00005724      0x146 ./HAL/CLCD/CLCD_program.o
+                0x00005724                CLCD_voidSendString
  .text.CLCD_voidSendu32Number
-                0x00002534      0x182 ./HAL/CLCD/CLCD_program.o
-                0x00002534                CLCD_voidSendu32Number
- .text.main     0x000026b6      0xbda ./main.o
-                0x000026b6                main
- .text.libgcc   0x00003290       0x44 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
-                0x00003290                __udivmodsi4
- .text.libgcc   0x000032d4        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .text.libgcc   0x000032d4        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .text.libgcc   0x000032d4       0x38 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
-                0x000032d4                __prologue_saves__
- .text.libgcc   0x0000330c       0x36 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
-                0x0000330c                __epilogue_restores__
-                0x00003342                . = ALIGN (0x2)
+                0x0000586a      0x182 ./HAL/CLCD/CLCD_program.o
+                0x0000586a                CLCD_voidSendu32Number
+ .text.main     0x000059ec        0xa ./main.o
+                0x000059ec                main
+ .text.libgcc   0x000059f6       0x28 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+                0x000059f6                __udivmodhi4
+ .text.libgcc   0x00005a1e       0x44 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+                0x00005a1e                __udivmodsi4
+ .text.libgcc   0x00005a62        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .text.libgcc   0x00005a62        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .text.libgcc   0x00005a62       0x38 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+                0x00005a62                __prologue_saves__
+ .text.libgcc   0x00005a9a       0x36 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+                0x00005a9a                __epilogue_restores__
+                0x00005ad0                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00003342        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
-                0x00003342                exit
-                0x00003342                _exit
+ .fini9         0x00005ad0        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+                0x00005ad0                exit
+                0x00005ad0                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -354,100 +393,96 @@ LOAD e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00003342        0x4 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .fini0         0x00005ad0        0x4 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00003346                _etext = .
+                0x00005ad4                _etext = .
 
-.data           0x00800060       0x8c load address 0x00003346
+.data           0x00800060       0x2c load address 0x00005ad4
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
  .data          0x00800060        0x0 ./MCAL/DIO/DIO_program.o
+ .data          0x00800060        0x0 ./HAL/STEPPER_MOTOR/STEPPER_program.o
  .data          0x00800060        0x0 ./HAL/SSD/SSD_program.o
  .data          0x00800060        0x0 ./HAL/LED/LED_program.o
  .data          0x00800060        0x0 ./HAL/KPAD/KPAD_program.o
+ .data          0x00800060        0x0 ./HAL/DC_MOTOR/DCMOTOR_program.o
  .data          0x00800060        0x0 ./HAL/CLCD/CLCD_program.o
- .data          0x00800060       0x47 ./main.o
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .data          0x008000a7        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .data          0x008000a7        0x8 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
-                0x008000a7                __thenan_sf
- .data          0x008000af        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .data          0x008000af        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .data          0x008000af        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .data          0x008000af        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .data          0x008000af        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .data          0x00800060        0x0 ./main.o
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .data          0x00800060        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .data          0x00800060        0x8 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+                0x00800060                __thenan_sf
+ .data          0x00800068        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .data          0x00800068        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .data          0x00800068        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .data          0x00800068        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .data          0x00800068        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.data*)
- .data.Person   0x008000af        0x8 ./main.o
-                0x008000af                Person
- .data.GradPerson
-                0x008000b7        0x8 ./main.o
-                0x008000b7                GradPerson
- .data.Building
-                0x008000bf        0x8 ./main.o
-                0x008000bf                Building
- .data.Wire     0x008000c7        0x8 ./main.o
-                0x008000c7                Wire
- .data.Trap     0x008000cf        0x8 ./main.o
-                0x008000cf                Trap
+ .data.KPAD_Au8Values
+                0x00800068       0x10 ./HAL/KPAD/KPAD_program.o
+                0x00800068                KPAD_Au8Values
  *(.rodata)
  *(.rodata*)
- .rodata.array  0x008000d7        0xa ./HAL/SSD/SSD_program.o
- .rodata.array  0x008000e1        0xa ./main.o
+ .rodata.array  0x00800078        0xa ./HAL/SSD/SSD_program.o
+ .rodata.array  0x00800082        0xa ./main.o
  *(.gnu.linkonce.d*)
-                0x008000ec                . = ALIGN (0x2)
- *fill*         0x008000eb        0x1 00
-                0x008000ec                _edata = .
-                0x008000ec                PROVIDE (__data_end, .)
+                0x0080008c                . = ALIGN (0x2)
+                0x0080008c                _edata = .
+                0x0080008c                PROVIDE (__data_end, .)
 
-.bss            0x008000ec        0x0
-                0x008000ec                PROVIDE (__bss_start, .)
+.bss            0x0080008c        0x0
+                0x0080008c                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
- .bss           0x008000ec        0x0 ./MCAL/DIO/DIO_program.o
- .bss           0x008000ec        0x0 ./HAL/SSD/SSD_program.o
- .bss           0x008000ec        0x0 ./HAL/LED/LED_program.o
- .bss           0x008000ec        0x0 ./HAL/KPAD/KPAD_program.o
- .bss           0x008000ec        0x0 ./HAL/CLCD/CLCD_program.o
- .bss           0x008000ec        0x0 ./main.o
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
- .bss           0x008000ec        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/../../../../avr/lib/avr5/crtm32.o
+ .bss           0x0080008c        0x0 ./MCAL/DIO/DIO_program.o
+ .bss           0x0080008c        0x0 ./HAL/STEPPER_MOTOR/STEPPER_program.o
+ .bss           0x0080008c        0x0 ./HAL/SSD/SSD_program.o
+ .bss           0x0080008c        0x0 ./HAL/LED/LED_program.o
+ .bss           0x0080008c        0x0 ./HAL/KPAD/KPAD_program.o
+ .bss           0x0080008c        0x0 ./HAL/DC_MOTOR/DCMOTOR_program.o
+ .bss           0x0080008c        0x0 ./HAL/CLCD/CLCD_program.o
+ .bss           0x0080008c        0x0 ./main.o
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodhi4.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_udivmodsi4.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_exit.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_copy_data.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fixunssfsi.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_addsub_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_mul_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_div_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_gt_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_ge_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_lt_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_sf_to_si.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_thenan_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_prologue.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_epilogue.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_pack_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_unpack_sf.o)
+ .bss           0x0080008c        0x0 e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win_64/winavr/bin/../lib/gcc/avr/4.3.3/avr5\libgcc.a(_fpcmp_parts_sf.o)
  *(.bss*)
  *(COMMON)
-                0x008000ec                PROVIDE (__bss_end, .)
-                0x00003346                __data_load_start = LOADADDR (.data)
-                0x000033d2                __data_load_end = (__data_load_start + SIZEOF (.data))
+                0x0080008c                PROVIDE (__bss_end, .)
+                0x00005ad4                __data_load_start = LOADADDR (.data)
+                0x00005b00                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x008000ec        0x0
-                0x008000ec                PROVIDE (__noinit_start, .)
+.noinit         0x0080008c        0x0
+                0x0080008c                PROVIDE (__noinit_start, .)
  *(.noinit*)
-                0x008000ec                PROVIDE (__noinit_end, .)
-                0x008000ec                _end = .
-                0x008000ec                PROVIDE (__heap_start, .)
+                0x0080008c                PROVIDE (__noinit_end, .)
+                0x0080008c                _end = .
+                0x0080008c                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
  *(.eeprom*)
@@ -465,23 +500,27 @@ LOAD e:/islam/careers/embedded/iti/sessions/01cprogramming/session14/imt_sdk_win
 .signature
  *(.signature*)
 
-.stab           0x00000000     0x2958
+.stab           0x00000000     0x444c
  *(.stab)
  .stab          0x00000000      0x5a0 ./MCAL/DIO/DIO_program.o
- .stab          0x000005a0      0x2ac ./HAL/SSD/SSD_program.o
+ .stab          0x000005a0     0x2100 ./HAL/STEPPER_MOTOR/STEPPER_program.o
+                               0x210c (size before relaxing)
+ .stab          0x000026a0      0x2ac ./HAL/SSD/SSD_program.o
                                 0x2b8 (size before relaxing)
- .stab          0x0000084c      0x294 ./HAL/LED/LED_program.o
+ .stab          0x0000294c      0x294 ./HAL/LED/LED_program.o
                                 0x2a0 (size before relaxing)
- .stab          0x00000ae0       0xd8 ./HAL/KPAD/KPAD_program.o
-                                 0xe4 (size before relaxing)
- .stab          0x00000bb8     0x1164 ./HAL/CLCD/CLCD_program.o
+ .stab          0x00002be0      0x450 ./HAL/KPAD/KPAD_program.o
+                                0x5e8 (size before relaxing)
+ .stab          0x00003030      0x27c ./HAL/DC_MOTOR/DCMOTOR_program.o
+                                0x414 (size before relaxing)
+ .stab          0x000032ac      0xfd8 ./HAL/CLCD/CLCD_program.o
                                0x1170 (size before relaxing)
- .stab          0x00001d1c      0xc3c ./main.o
-                                0xe04 (size before relaxing)
+ .stab          0x00004284      0x1c8 ./main.o
+                                0x390 (size before relaxing)
 
-.stabstr        0x00000000      0xefd
+.stabstr        0x00000000     0x11f7
  *(.stabstr)
- .stabstr       0x00000000      0xefd ./MCAL/DIO/DIO_program.o
+ .stabstr       0x00000000     0x11f7 ./MCAL/DIO/DIO_program.o
 
 .stab.excl
  *(.stab.excl)

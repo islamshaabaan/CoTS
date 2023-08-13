@@ -1,11 +1,11 @@
 # CoTS
 Layerd Architecture SW components of (AVR) Atmega32.
+# MCAL
+Drivers of Micro Controller Peripherals:
+    DIO, ADC, INTERRUPT, TIMER, and so on...
+# HAL
+Drivers of Hardware components:
+    LED, SSD, LCD, Motors, and so on...
+# LIB
+files which contain a MACROS and user defined data types.
   
-------------------------------------------------------------------------------
-# You can try it in proteus, you will find the simulation design in APPs folders
-  1- Build the project "main.c".
-  
-  2- Upload the .hex file into the Microcontroller "atmega32".
-  
-  3- Run the simulation.
-
